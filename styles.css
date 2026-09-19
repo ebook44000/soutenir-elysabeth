@@ -118,6 +118,6 @@ footer{background:#2f2b25}
 
 /* Liens de soutien et protection antispam du formulaire */
 .action-card{text-decoration:none}
-.gofundme{grid-column:1/-1}
+.kofi{grid-column:1/-1;background:#ff5e5b;color:#fff}
 .form-honey{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
-@media(max-width:800px){.gofundme{grid-column:auto}}
+@media(max-width:800px){.kofi{grid-column:auto}}
