@@ -156,6 +156,7 @@ select{display:block;width:100%;margin-top:7px;border:1px solid #cdbfae;border-r
 @media(max-width:760px){.stars-choices{grid-template-columns:1fr}.stars-section{padding:72px 0}.stars-wall{padding:26px 20px}.welcome-star{align-items:flex-start}}
 
 /* Sillage d’étoiles dorées */
-.cursor-star{position:fixed;z-index:9999;left:0;top:0;pointer-events:none;user-select:none;color:var(--gold);font-family:Georgia,serif;line-height:1;will-change:transform,opacity;animation:star-drift .78s ease-out forwards}
-@keyframes star-drift{0%{transform:translate(-50%,-50%) scale(.25) rotate(0deg);opacity:0}18%{opacity:.95}100%{transform:translate(calc(-50% + var(--drift-x)),calc(-50% + var(--drift-y))) scale(1.05) rotate(var(--spin));opacity:0}}
+.cursor-star{position:fixed;z-index:9999;left:0;top:0;pointer-events:none;user-select:none;color:#d7ae59;font-family:Georgia,serif;line-height:1;text-shadow:0 0 5px rgba(255,223,136,.95),0 0 11px rgba(215,174,89,.72);filter:drop-shadow(0 0 3px rgba(255,232,165,.8));will-change:transform,opacity;animation:star-drift var(--star-duration,1.65s) cubic-bezier(.16,.7,.28,1) forwards}
+.cursor-star.is-dust{color:#e8c978;text-shadow:0 0 5px rgba(255,230,153,.95),0 0 9px rgba(215,174,89,.75)}
+@keyframes star-drift{0%{transform:translate(-50%,-50%) scale(.18) rotate(0deg);opacity:0}10%{opacity:1}42%{opacity:.9}100%{transform:translate(calc(-50% + var(--drift-x)),calc(-50% + var(--drift-y))) scale(1.18) rotate(var(--spin));opacity:0}}
 @media(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-star{display:none!important}}
