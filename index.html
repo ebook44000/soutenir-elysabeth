@@ -38,6 +38,7 @@
           <a href="#humain">Préserver l’humain</a>
           <a href="#objectif">Le financement</a>
           <a href="#soutenir">Participer</a>
+          <a href="#cercle">Le Cercle des étoiles</a>
           <a class="shop-tab" href="https://letoiledelasource.com/" target="_blank" rel="noopener noreferrer">Visiter la boutique ↗</a>
         </nav>
       </div>
@@ -149,7 +150,7 @@
       <p class="section-kicker">Choisissez votre manière de participer</p>
       <h2>Ensemble, faisons vivre ce projet</h2>
       <div class="action-grid">
-        <button class="action-card contact" data-action="contact">
+        <button class="action-card contact" data-dialog-open="contactDialog">
           <span class="action-icon">✉</span><strong>Contacter Elysabeth</strong><small>Lui écrire un message personnel</small>
         </button>
         <a class="action-card paypal" href="https://paypal.me/Ellyslamaindesanges" target="_blank" rel="noopener noreferrer">
@@ -163,6 +164,24 @@
         </a>
       </div>
       <p class="signature">Avec toute ma gratitude et tout mon cœur,<br><strong>Elysabeth Ramirez</strong><br><em>L’Étoile de la Source</em> 🤍</p>
+    </section>
+
+    <section class="stars-section" id="cercle" aria-labelledby="stars-title">
+      <div class="section-shell">
+        <p class="section-kicker">Chaque soutien fait rayonner le projet</p>
+        <h2 id="stars-title">Le Cercle des étoiles</h2>
+        <p class="stars-intro">Tu as participé, partagé la cagnotte ou tu souhaites apporter ton soutien prochainement ? Laisse une étoile et quelques mots d’encouragement.</p>
+        <div class="stars-choices" aria-label="Les différentes manières de soutenir le projet">
+          <div><span>✦</span><strong>J’ai participé</strong><small>Je laisse un petit mot</small></div>
+          <div><span>✦</span><strong>J’ai partagé</strong><small>Je contribue à faire connaître le projet</small></div>
+          <div><span>✦</span><strong>Je participerai prochainement</strong><small>Je manifeste mon intention de soutenir</small></div>
+        </div>
+        <div class="stars-wall" aria-label="Messages du Cercle des étoiles">
+          <div class="welcome-star"><span>✦</span><p>Le cercle attend ses premières étoiles.<br><strong>Ton message pourra apparaître ici après validation.</strong></p></div>
+        </div>
+        <button class="primary-button stars-button" data-dialog-open="starsDialog">Je laisse une étoile</button>
+        <p class="stars-note">Aucun montant n’est demandé ni affiché. Les messages sont vérifiés avant leur publication.</p>
+      </div>
     </section>
 
     <section class="shop-cta section-shell" aria-labelledby="boutique-title">
@@ -198,6 +217,33 @@
       <div class="character-count"><span id="count">0</span> / 1 500 caractères</div>
       <button class="primary-button form-submit" type="submit">Envoyer mon message</button>
       <p class="form-note">Votre message sera transmis directement à Elysabeth. Votre adresse e-mail sera utilisée uniquement pour vous répondre.</p>
+    </form>
+  </dialog>
+
+  <dialog id="starsDialog">
+    <button class="dialog-close" data-dialog-close aria-label="Fermer">×</button>
+    <p class="section-kicker">Rejoindre le Cercle des étoiles</p>
+    <h2>Je laisse une étoile</h2>
+    <form action="https://formsubmit.co/letoiledelasource@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nouvelle étoile à valider sur la page de soutien">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off">
+      <label>Prénom ou pseudonyme <span>*</span><input name="name" required maxlength="60"></label>
+      <label>Adresse e-mail <span>*</span><input type="email" name="email" autocomplete="email" required maxlength="150"></label>
+      <label>Mon geste de soutien <span>*</span>
+        <select name="support" required>
+          <option value="">Choisir une réponse</option>
+          <option>J’ai participé</option>
+          <option>J’ai partagé la cagnotte</option>
+          <option>Je souhaite participer prochainement</option>
+        </select>
+      </label>
+      <label>Mon message <span>*</span><textarea name="message" required maxlength="500" rows="5" data-count-target="starsCount"></textarea></label>
+      <div class="character-count"><span id="starsCount">0</span> / 500 caractères</div>
+      <label class="publication-consent"><input type="checkbox" name="publication_authorisee" value="Oui" required> J’autorise la publication de mon prénom ou pseudonyme et de mon message sur cette page.</label>
+      <button class="primary-button form-submit" type="submit">Envoyer mon étoile</button>
+      <p class="form-note">L’adresse e-mail sert uniquement à vérifier le message. Elle ne sera jamais affichée.</p>
     </form>
   </dialog>
 

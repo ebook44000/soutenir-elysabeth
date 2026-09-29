@@ -103,7 +103,7 @@ footer{background:#2f2b25}
 .page-steps a:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-2px)}
 .page-steps .shop-tab{background:var(--gold);border-color:var(--gold);color:#fff}
 .page-steps .shop-tab:hover{background:#ae694a;border-color:#ae694a}
-#mon-histoire,#besoin,#projet,#humain,#objectif,#soutenir{scroll-margin-top:24px}
+#mon-histoire,#besoin,#projet,#humain,#objectif,#soutenir,#cercle{scroll-margin-top:24px}
 @media(max-width:600px){.hero-goal{display:block}.hero-goal .amount{border-right:0;padding-right:0;margin-bottom:6px}.page-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.page-steps a{padding-inline:9px;font-size:.72rem;text-align:center}}
 
 /* Grand accès à la boutique en bas de page */
@@ -122,3 +122,16 @@ footer{background:#2f2b25}
 .gofundme{grid-column:auto}
 .form-honey{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
 @media(max-width:800px){.kofi,.gofundme{grid-column:auto}}
+
+/* Cercle des étoiles */
+.stars-section{padding:100px 0;background:linear-gradient(135deg,#eef3e9 0%,#f8f2e9 100%);text-align:center;border-top:1px solid rgba(86,107,82,.15);border-bottom:1px solid rgba(86,107,82,.15)}
+.stars-section h2{margin-bottom:18px}.stars-intro{max-width:780px;margin:0 auto 34px;color:#5f574e}
+.stars-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:980px;margin:0 auto 28px}
+.stars-choices div{padding:26px 20px;background:rgba(255,255,255,.78);border:1px solid rgba(86,107,82,.22);border-radius:18px}
+.stars-choices span{display:block;color:var(--gold);font-size:1.8rem}.stars-choices strong,.stars-choices small{display:block}.stars-choices strong{color:var(--plum);margin:4px 0}.stars-choices small{color:#746b61}
+.stars-wall{max-width:900px;margin:0 auto 28px;padding:34px;background:#fff;border:1px solid rgba(215,174,89,.38);border-radius:24px;box-shadow:var(--shadow)}
+.welcome-star{display:flex;align-items:center;justify-content:center;gap:18px;color:#746b61}.welcome-star>span{display:grid;place-items:center;width:58px;height:58px;flex:none;border-radius:50%;background:#f4e6be;color:var(--gold);font-size:1.9rem}.welcome-star p{margin:0;text-align:left}.welcome-star strong{color:var(--plum)}
+.stars-button{margin-top:6px}.stars-note{max-width:700px;margin:18px auto 0;font-size:.78rem;color:#746b61}
+select{display:block;width:100%;margin-top:7px;border:1px solid #cdbfae;border-radius:10px;padding:12px;background:white;font:inherit;color:var(--ink)}
+.publication-consent{display:flex;align-items:flex-start;gap:10px;font-weight:400;line-height:1.45}.publication-consent input{width:auto;margin:4px 0 0;flex:none}
+@media(max-width:760px){.stars-choices{grid-template-columns:1fr}.stars-section{padding:72px 0}.stars-wall{padding:26px 20px}.welcome-star{align-items:flex-start}}

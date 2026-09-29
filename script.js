@@ -1,16 +1,19 @@
-const dialog = document.querySelector('#contactDialog');
-const openButton = document.querySelector('[data-action="contact"]');
-const closeButton = document.querySelector('.dialog-close');
-const textarea = document.querySelector('textarea[name="message"]');
-const count = document.querySelector('#count');
-
-openButton.addEventListener('click', () => dialog.showModal());
-closeButton.addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', (event) => {
-  if (event.target === dialog) dialog.close();
+document.querySelectorAll('[data-dialog-open]').forEach((button) => {
+  button.addEventListener('click', () => {
+    document.getElementById(button.dataset.dialogOpen)?.showModal();
+  });
 });
-textarea.addEventListener('input', () => {
-  count.textContent = textarea.value.length.toLocaleString('fr-FR');
+document.querySelectorAll('dialog').forEach((dialog) => {
+  dialog.querySelector('.dialog-close')?.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+});
+document.querySelectorAll('textarea[maxlength]').forEach((textarea) => {
+  const count = document.getElementById(textarea.dataset.countTarget || 'count');
+  textarea.addEventListener('input', () => {
+    if (count) count.textContent = textarea.value.length.toLocaleString('fr-FR');
+  });
 });
 document.querySelectorAll('[data-pending="true"]').forEach((button) => {
   button.addEventListener('click', () => {
