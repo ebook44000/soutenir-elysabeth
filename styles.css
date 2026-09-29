@@ -123,6 +123,23 @@ footer{background:#2f2b25}
 .form-honey{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
 @media(max-width:800px){.kofi,.gofundme{grid-column:auto}}
 
+/* Accès immédiat aux dons sous l’en-tête */
+.quick-support{padding:64px 0 72px;background:#fff;border-bottom:1px solid rgba(86,107,82,.16)}
+.quick-support-inner{display:grid;grid-template-columns:.78fr 1.22fr;gap:58px 70px;align-items:center}
+.quick-support-heading h2{font-size:clamp(2.35rem,3.8vw,3.7rem);margin-bottom:20px}.quick-support-heading>p:last-child{margin:0;color:#655c54}
+.quick-donation-grid{display:grid;gap:13px}
+.quick-donation{display:grid;grid-template-columns:50px 1fr auto;align-items:center;gap:16px;min-height:84px;padding:15px 18px;border-radius:17px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.quick-donation:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(40,30,25,.13)}
+.quick-donation span:nth-child(2){min-width:0}.quick-donation strong,.quick-donation small{display:block}.quick-donation strong{font-size:.98rem}.quick-donation small{margin-top:3px;opacity:.72}.quick-donation>b{font-size:1.45rem;font-weight:400}
+.quick-icon{display:grid;width:50px;height:50px;place-items:center;border-radius:50%;background:rgba(255,255,255,.85);font-size:1.25rem;font-weight:700}
+.gofundme-quick{background:#dff6dc;color:#235c38}.paypal-quick{background:#d8eaff;color:#153163}.kofi-quick{background:#ff6865;color:#fff}
+.quick-secondary-actions{grid-column:1/-1;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:-24px}
+.story-link,.star-link{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 19px;border-radius:999px;font:600 .82rem Montserrat,sans-serif;text-decoration:none;transition:transform .2s,background .2s}
+.story-link{background:var(--leaf-dark);color:#fff}.story-link span{margin-left:10px;font-size:1.05rem}.story-link:hover{background:var(--gold);transform:translateY(-2px)}
+.star-link{border:1px solid rgba(215,174,89,.6);background:#fff8e8;color:var(--plum);cursor:pointer}.star-link span{margin-right:8px;color:var(--gold)}.star-link:hover{background:#f4e6be;transform:translateY(-2px)}
+@media(max-width:850px){.quick-support{padding:52px 0 60px}.quick-support-inner{grid-template-columns:1fr;gap:34px}.quick-support-heading{text-align:center}.quick-support-heading>p:last-child{max-width:650px;margin-inline:auto}.quick-secondary-actions{margin-top:0}}
+@media(max-width:520px){.quick-donation{grid-template-columns:46px 1fr auto;padding:13px 14px}.quick-icon{width:46px;height:46px}.quick-donation small{font-size:.72rem}.story-link,.star-link{width:100%;text-align:center}}
+
 /* Cercle des étoiles */
 .stars-section{padding:100px 0;background:linear-gradient(135deg,#eef3e9 0%,#f8f2e9 100%);text-align:center;border-top:1px solid rgba(86,107,82,.15);border-bottom:1px solid rgba(86,107,82,.15)}
 .stars-section h2{margin-bottom:18px}.stars-intro{max-width:780px;margin:0 auto 34px;color:#5f574e}
