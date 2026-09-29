@@ -126,6 +126,8 @@ footer{background:#2f2b25}
 /* Accès immédiat aux dons sous l’en-tête */
 .quick-support{padding:64px 0 72px;background:#fff;border-bottom:1px solid rgba(86,107,82,.16)}
 .quick-support-inner{display:grid;grid-template-columns:.78fr 1.22fr;gap:58px 70px;align-items:center}
+.visitor-thanks{grid-column:1/-1;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 14px;margin:-22px auto -22px;padding:13px 22px;border:1px solid rgba(215,174,89,.42);border-radius:999px;background:#fff8e8;color:#65513b;box-shadow:0 8px 24px rgba(58,44,30,.08)}
+.visitor-thanks p{margin:0}.visitor-thanks strong{font-size:.86rem;color:var(--plum)}.visitor-thanks img{display:block;height:28px;width:auto}.visitor-star{color:var(--gold);font-size:1.55rem}
 .quick-support-heading h2{font-size:clamp(2.35rem,3.8vw,3.7rem);margin-bottom:20px}.quick-support-heading>p:last-child{margin:0;color:#655c54}
 .quick-donation-grid{display:grid;gap:13px}
 .quick-donation{display:grid;grid-template-columns:50px 1fr auto;align-items:center;gap:16px;min-height:84px;padding:15px 18px;border-radius:17px;text-decoration:none;transition:transform .2s,box-shadow .2s}
@@ -138,7 +140,7 @@ footer{background:#2f2b25}
 .story-link{background:var(--leaf-dark);color:#fff}.story-link span{margin-left:10px;font-size:1.05rem}.story-link:hover{background:var(--gold);transform:translateY(-2px)}
 .star-link{border:1px solid rgba(215,174,89,.6);background:#fff8e8;color:var(--plum);cursor:pointer}.star-link span{margin-right:8px;color:var(--gold)}.star-link:hover{background:#f4e6be;transform:translateY(-2px)}
 @media(max-width:850px){.quick-support{padding:52px 0 60px}.quick-support-inner{grid-template-columns:1fr;gap:34px}.quick-support-heading{text-align:center}.quick-support-heading>p:last-child{max-width:650px;margin-inline:auto}.quick-secondary-actions{margin-top:0}}
-@media(max-width:520px){.quick-donation{grid-template-columns:46px 1fr auto;padding:13px 14px}.quick-icon{width:46px;height:46px}.quick-donation small{font-size:.72rem}.story-link,.star-link{width:100%;text-align:center}}
+@media(max-width:520px){.quick-donation{grid-template-columns:46px 1fr auto;padding:13px 14px}.quick-icon{width:46px;height:46px}.quick-donation small{font-size:.72rem}.story-link,.star-link{width:100%;text-align:center}.visitor-thanks{border-radius:18px;margin:-22px auto -10px;text-align:center}.visitor-thanks p,.visitor-thanks strong{width:100%}}
 
 /* Cercle des étoiles */
 .stars-section{padding:100px 0;background:linear-gradient(135deg,#eef3e9 0%,#f8f2e9 100%);text-align:center;border-top:1px solid rgba(86,107,82,.15);border-bottom:1px solid rgba(86,107,82,.15)}
@@ -152,3 +154,8 @@ footer{background:#2f2b25}
 select{display:block;width:100%;margin-top:7px;border:1px solid #cdbfae;border-radius:10px;padding:12px;background:white;font:inherit;color:var(--ink)}
 .publication-consent{display:flex;align-items:flex-start;gap:10px;font-weight:400;line-height:1.45}.publication-consent input{width:auto;margin:4px 0 0;flex:none}
 @media(max-width:760px){.stars-choices{grid-template-columns:1fr}.stars-section{padding:72px 0}.stars-wall{padding:26px 20px}.welcome-star{align-items:flex-start}}
+
+/* Sillage d’étoiles dorées */
+.cursor-star{position:fixed;z-index:9999;left:0;top:0;pointer-events:none;user-select:none;color:var(--gold);font-family:Georgia,serif;line-height:1;will-change:transform,opacity;animation:star-drift .78s ease-out forwards}
+@keyframes star-drift{0%{transform:translate(-50%,-50%) scale(.25) rotate(0deg);opacity:0}18%{opacity:.95}100%{transform:translate(calc(-50% + var(--drift-x)),calc(-50% + var(--drift-y))) scale(1.05) rotate(var(--spin));opacity:0}}
+@media(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-star{display:none!important}}
